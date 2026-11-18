@@ -1,0 +1,8 @@
+generator client {
+  // prisma-client-js keeps the generated runtime client directly usable by this JavaScript app.
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
