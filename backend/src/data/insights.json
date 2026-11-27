@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-11-20",
+  "dataSource": "CONTOH (dummy) — ganti dengan hasil notebook analisis tim Data Science",
+  "insights": [
+    {
+      "title": "Dress paling sering ditanyakan",
+      "detail": "Contoh: 45% pertanyaan pelanggan menyebut produk kategori Dress, terutama ukuran M.",
+      "recommendation": "Contoh: prioritaskan restock Dress ukuran M sebelum live TikTok."
+    },
+    {
+      "title": "Pertanyaan stok mendominasi",
+      "detail": "Contoh: intent tanya_stok adalah intent terbanyak.",
+      "recommendation": "Contoh: pastikan stok di halaman admin diperbarui setiap selesai live."
+    }
+  ]
+}

@@ -151,7 +151,8 @@ export default function Catalog() {
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
           <p className="eyebrow mb-3">Koleksi Halika</p>
-          <h1 className="font-display text-4xl md:text-5xl">{params.category || 'Semua Produk'}</h1>
+          <h1 className="font-display text-4xl md:text-5xl">
+          {params.category || (searchParams.get('sort') === 'newest' ? 'Produk Terbaru' : 'Semua Produk')} </h1>
         </div>
         {meta && status === 'success' && <p className="eyebrow">{meta.total} produk</p>}
       </div>

@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/sonner';
 import Home from '@/pages/Home';
 import Catalog from '@/pages/Catalog';
 import ProductDetail from '@/pages/ProductDetail';
+import About from '@/pages/About';
 import NotFound from '@/pages/NotFound';
 
 // Halaman admin dimuat terpisah agar halaman pelanggan lebih ringan di ponsel
@@ -27,6 +28,7 @@ export default function App() {
               <Route index element={<Home />} />
               <Route path="koleksi" element={<Catalog />} />
               <Route path="produk/:slug" element={<ProductDetail />} />
+              <Route path="tentang-kami" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Route>
             <Route path="admin/login" element={<Login />} />

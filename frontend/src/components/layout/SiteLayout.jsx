@@ -16,8 +16,8 @@ export function Logo({ className, light = false }) {
 const NAV = [
   { to: '/', label: 'Beranda', end: true },
   { to: '/koleksi', label: 'Koleksi' },
-  { to: '/koleksi?category=Dress', label: 'Dress' },
-  { to: '/koleksi?category=Atasan', label: 'Atasan' },
+  { to: '/koleksi?sort=newest', label: 'Terbaru' },
+  { to: '/tentang-kami', label: 'Tentang Kami' },
 ];
 
 function Header() {
@@ -27,8 +27,9 @@ function Header() {
 
   const isActive = (to) => {
     const [path, query] = to.split('?');
-    if (query) return location.pathname === path && location.search.includes(query);
-    return location.pathname === path && (path !== '/koleksi' || !location.search.includes('category='));
+    if (location.pathname !== path) return false;
+    if (query) return location.search.includes(query);
+    return !NAV.some((n) => n.to.startsWith(`${path}?`) && location.search.includes(n.to.split('?')[1]));
   };
 
   return (
@@ -96,6 +97,7 @@ function Footer() {
           <Link to="/koleksi" className="hover:text-primary">Semua Koleksi</Link>
           <Link to="/koleksi?category=Dress" className="hover:text-primary">Dress</Link>
           <Link to="/koleksi?category=Atasan" className="hover:text-primary">Atasan</Link>
+          <Link to="/tentang-kami" className="hover:text-primary">Tentang Kami</Link>
         </div>
         <div className="flex flex-col items-start gap-2.5 text-sm">
           <b className="eyebrow mb-1">Bantuan</b>

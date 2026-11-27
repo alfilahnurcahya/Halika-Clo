@@ -69,9 +69,6 @@ export default function Home() {
             <Button asChild size="lg">
               <Link to="/koleksi">Jelajahi koleksi <Icon name="arrow" size={18} /></Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white/60 text-white hover:bg-white/10" onClick={() => openChat()}>
-              <Icon name="sparkle" size={18} /> Tanya stok
-            </Button>
           </div>
         </div>
       </section>
